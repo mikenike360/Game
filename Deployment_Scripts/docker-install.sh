@@ -16,7 +16,8 @@ export installmode=docker
   ca-certificates \
   curl \
   software-properties-common
-  sudo apt install docker docker-compose -y
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo apt install docker-ce docker-compose -y
   # Adds instance user to docker group so it can execute commands.
   sudo usermod -a -G docker ubuntu
   # Permits instance user to execute Docker commands without sudo
